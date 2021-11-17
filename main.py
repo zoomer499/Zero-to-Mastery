@@ -629,17 +629,17 @@
 
 # nonlocal Keyword
 
-def outer():
-  x = "local"
-  def inner():
-    nonlocal x
-    x = "nonlocal"
-    print("inner:", x)
-
-  inner()
-  print("outer:", x)
-
-outer()
+# def outer():
+#   x = "local"
+#   def inner():
+#     nonlocal x
+#     x = "nonlocal"
+#     print("inner:", x)
+# 
+#   inner()
+#   print("outer:", x)
+# 
+# outer()
 
 # 1 - start with local scope
 # 2 - Parent  local? --> nonlocal x
@@ -657,3 +657,36 @@ print(name.strip()) # strip() can be used to remove any whitespace from both the
 '''
 # Which collection is ordered, changeable, and allows duplicate members? LIST  
 # Which collection does not allow duplicate members? SET
+
+
+# OOP
+# # What Is OOP
+# class BigObject: # Class
+#     pass
+# 
+# obj1 = BigObject() # instanciate - create object
+# obj2 = BigObject() # instanciate - create object
+# obj3 = BigObject() # instanciate - create object
+# 
+# print(type(None)) 
+# print(type(True))
+# print(type(5))
+# print(type(5.5))
+# print(type('hi'))
+# print(type([]))
+# print(type({}))
+# print(type(()))
+# print(type(obj1))
+
+# Create our Own Objects
+
+class PlayerCharacters:
+    def __init__(self, name):
+        self.name = name
+
+    def run(self):
+        print('run')
+
+player1 = PlayerCharacters()
+
+print(player1)
